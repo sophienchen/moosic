@@ -81,3 +81,7 @@ nav {
   height: 60px;
   margin-top: 60px;
 }
+
+.emoji-slider {
+  display: flex;
+}
