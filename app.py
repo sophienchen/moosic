@@ -16,7 +16,7 @@ token = util.prompt_for_user_token(
         scope="user-library-read",
         client_id=config.CID,
         client_secret=config.CSECRET,
-        redirect_uri="https://sophienchen.github.io/moosic/")
+        redirect_uri="https://moosic-pennapps.herokuapp.com/")
 sp = spotipy.Spotify(auth=token.get_access_token())
 results = sp.current_user_top_artists(limit=20, offset=0, time_range='medium_term')
 print (results)
