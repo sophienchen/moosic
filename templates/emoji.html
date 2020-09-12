@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>moosic</title>
   <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -16,42 +17,67 @@
   </nav>
   <div class="main-container">
     <div class="main-text">
-      <h1>What kind of music are you feeling today?</h1>
+      <h1 id="question">What kind of music are </h1>
+      <h1 id="question">you feeling today?</h1>
     </div>
-    <div class="emoji-input">
-
+    <div class="emoji-options">
+      <div class="emoji">
+        <input type="checkbox" name="heart" id="heart">
+        <label for="heart">
+          <span class="label-heart"></span>
+        </label>
+      </div>
+      <div class="emoji">
+        <input type="checkbox" name="happy" id="happy">
+        <label for="happy">
+          <span class="label-happy"></span>
+        </label>
+      </div>
+      <div class="emoji">
+        <input type="checkbox" name="dance" id="dance">
+        <label for="dance">
+          <span class="label-dance"></span>
+        </label>
+      </div>
+      <div class="emoji">
+        <input type="checkbox" name="sad" id="sad">
+        <label for="sad">
+          <span class="label-sad"></span>
+        </label>
+      </div>
+      <div class="emoji">
+        <input type="checkbox" name="electronic" id="electronic">
+        <label for="electronic">
+          <span class="label-electronic"></span>
+        </label>
+      </div>
+      <div class="emoji">
+        <input type="checkbox" name="sleepy" id="sleepy">
+        <label for="sleepy">
+          <span class="label-sleepy"></span>
+        </label>
+      </div>
+      <div class="emoji">
+        <input type="checkbox" name="acoustic" id="acoustic">
+        <label for="acoustic">
+          <span class="label-acoustic"></span>
+        </label>
+      </div>
+      <div class="emoji">
+        <input type="checkbox" name="fire" id="fire">
+        <label for="fire">
+          <span class="label-fire"></span>
+        </label>
+      </div>
+      <div class="emoji">
+        <input type="checkbox" name="popular" id="popular">
+        <label for="popular">
+          <span class="label-popular"></span>
+        </label>
+      </div>
     </div>
-    <div class="emoji-slider">
-      <div class data-emojid="U+1F60E">
-        <span>😎</span>
-      </div>
-      <div class data-emojid="U+U+1F497">
-        <span>💗</span>
-      </div>
-      <div class data-emojid="U+U+1F604">
-        <span>😄</span>
-      </div>
-      <div class data-emojid="U+1F57A">
-        <span>🕺</span>
-      </div>
-      <div class data-emojid="U+1F622">
-        <span>😢</span>
-      </div>
-      <div class data-emojid="U+1F916">
-        <span>🤖</span>
-      </div>
-      <div class data-emojid="U+1F525">
-        <span>🔥</span>
-      </div>
-      <div class data-emojid="U+1F634">
-        <span>😴</span>
-      </div>
-      <div class data-emojid="U+1F3B9">
-        <span>🎹</span>
-      </div>
-      <div class data-emojid="U+1F92A">
-        <span>🤪</span>
-      </div>
+    <div class="play-button-outer">
+      <div class="play-button"></div>
     </div>
   </div>
 
