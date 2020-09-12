@@ -6,9 +6,19 @@ from flask_pymongo import PyMongo
 import spotipy
 import config
 from spotipy.oauth2 import SpotifyClientCredentials
+import os
+import spotipy.util as util
 
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=config.CID, client_secret=config.CSECRET))
-results = sp.track("0t1kP63rueHleOhQkYSXFY")
+# CID = os.environ['client']
+# CSECRET = os.environ['secret']
+token = util.prompt_for_user_token(
+        username="anna_millie24",
+        scope="user-library-read",
+        client_id=config.CID,
+        client_secret=config.CSECRET,
+        redirect_uri="https://sophienchen.github.io/moosic/")
+sp = spotipy.Spotify(auth=token.get_access_token())
+results = sp.current_user_top_artists(limit=20, offset=0, time_range='medium_term')
 print (results)
 # results = sp.search(q='weezer', limit=20)
 # for idx, track in enumerate(results['tracks']['items']):
