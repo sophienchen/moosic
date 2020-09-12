@@ -12,7 +12,7 @@ import spotipy.util as util
 # CID = os.environ['client']
 # CSECRET = os.environ['secret']
 token = util.prompt_for_user_token(
-        username="anna_millie24",
+        username=config.USER,
         scope="user-library-read",
         client_id=config.CID,
         client_secret=config.CSECRET,
